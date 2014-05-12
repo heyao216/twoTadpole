@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>66186359-455E-4344-9EA1-395EDFECD543</string>
+	<key>IDESourceControlProjectName</key>
+	<string>twotadpole</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BBE3CC4E-6A6B-43FC-A65F-FC54263638AD</key>
+		<string>https://github.com/heyao216/twoTadpole.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>proj.ios/twotadpole.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BBE3CC4E-6A6B-43FC-A65F-FC54263638AD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/heyao216/twoTadpole.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BBE3CC4E-6A6B-43FC-A65F-FC54263638AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BBE3CC4E-6A6B-43FC-A65F-FC54263638AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>twoTadpole</string>
+		</dict>
+	</array>
+</dict>
+</plist>
