@@ -231,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F456EFBD15EE019300FCF3E2 /* Build configuration list for PBXNativeTarget "twotadpole" */;
 			buildPhases = (
+				0727381719209D5E00388570 /* ShellScript */,
 				F456ECBD15EE018E00FCF3E2 /* Sources */,
 				F456ECBE15EE018E00FCF3E2 /* Frameworks */,
 				F456ECBF15EE018E00FCF3E2 /* Resources */,
@@ -303,6 +304,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0727381719209D5E00388570 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "_TARGET_BUILD_CONTENTS_PATH=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\necho _TARGET_BUILD_CONTENTS_PATH: $_TARGET_BUILD_CONTENTS_PATH\necho PWD: $PWD\n\necho Cleaning $_TARGET_BUILD_CONTENTS_PATH/\n\nrm -fr $_TARGET_BUILD_CONTENTS_PATH/scripts/*\nrm -fr $_TARGET_BUILD_CONTENTS_PATH/res/*\n                                            \nmkdir -p $_TARGET_BUILD_CONTENTS_PATH/scripts/\nmkdir -p $_TARGET_BUILD_CONTENTS_PATH/res/\n                                            \ncp -RLp $PWD/../res/* $_TARGET_BUILD_CONTENTS_PATH/res/\ncp -RLp $PWD/../scripts/* $_TARGET_BUILD_CONTENTS_PATH/scripts/";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F456ECBD15EE018E00FCF3E2 /* Sources */ = {
@@ -422,7 +439,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: guangqin qiu (2QUM8TR8CS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -477,7 +494,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "CDE7A089-72F4-4B32-B92D-A3F078C2166B";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
@@ -491,7 +508,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: guangqin qiu (2QUM8TR8CS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -544,7 +561,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "67833550-D497-48CD-B6D0-557EBC3F8A37";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

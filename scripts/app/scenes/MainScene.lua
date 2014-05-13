@@ -19,10 +19,15 @@ function MainScene:onEnter()
                 if event == "back" then app.exit() end
             end)
             self:addChild(layer)
-
+            layer:setTouchEnabled(true)
+            layer:addTouchEventListener(onLayerTouch)
             layer:setKeypadEnabled(true)
         end, 0.5)
     end
+end
+
+function onLayerTouch(event , x , y ,prevX , prevY)
+    print(event , x , y , prevX , prevY)
 end
 
 function MainScene:onExit()
