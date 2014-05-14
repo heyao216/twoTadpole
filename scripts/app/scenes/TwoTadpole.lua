@@ -1,6 +1,7 @@
 require("scripts/lib/utils")
 local scheduler = require("framework.scheduler")
 local controller
+local cheackPoint
 local TwoTadpole = class("TwoTadpole", function ()
 	return display.newNode()
 end)
@@ -24,6 +25,18 @@ function TwoTadpole:setAngle(angle)
 	self.tadpole1:setPositionY(math.sin(ang2rad(angle)) * circle_radius)
 	self.tadpole2:setPositionX(math.cos(ang2rad(angle + 180)) * circle_radius)
 	self.tadpole2:setPositionY(math.sin(ang2rad(angle + 180)) * circle_radius)
+
+	--[[for i = 1 , #cheackPoint.list do
+		local shape = cheackPoint.list[i]
+		if shape ~= nil then
+			local tadpole1Rect = self.tadpole1:convertToWorldSpace(ccp(0, 0))
+		end
+	end]]
+end
+
+--开始
+function TwoTadpole:start(cp)
+	cheackPoint = cp
 end
 
 --左触摸

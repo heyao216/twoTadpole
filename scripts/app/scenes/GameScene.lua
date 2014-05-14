@@ -15,6 +15,9 @@ function GameScene:ctor()
     gameLayer:setTouchEnabled(true)
     gameLayer:addChild(controller)
     controller:setPosition(ccp(DESIGN_SIZE_WIDTH  / 2, 100))
+    local cheackPoint = require("scripts/app/scenes/CheackPoint1"):new()
+    cheackPoint:init(gameLayer)
+    cheackPoint:start()
 end
 
 function GameScene:onEnter()
