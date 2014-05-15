@@ -14,3 +14,8 @@ DESIGN_SIZE_HEIGHT = 960
 
 -- auto scale mode
 CONFIG_SCREEN_AUTOSCALE = "FIXED_WIDTH"
+
+
+-- assets
+GAME_IMG = "game.png"
+GAME_DATA = "game.plist"
