@@ -1,6 +1,5 @@
 local CUR_MODULE = ...
 local CheackPoint1 = class("CheackPoint1")
-local scheduler = require("framework.scheduler")
 local NAMES = {"pineapple" , "strawberry" , "watermelon" , "grapes"}
 function CheackPoint1:ctor()
 	self.list = {}

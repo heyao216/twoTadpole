@@ -141,6 +141,34 @@ function M.physicsData(scale)
 
     
 
+    physics.data["fish_head"] = {
+        anchorpoint = { 0.50000,0.50000 },
+        shapes = {
+            
+            {
+                mass = 0,
+                elasticity = 0,
+                friction = 0,
+                surface_velocity = { 0.00000,0.00000 },
+                layers = 0,
+                group = 0,
+                collision_type = 2,
+                isSensor = false,
+                shape_type = "POLYGON",
+                
+                polygons = {
+                    
+                    {14.50000, 2.00000, 12.50000, -33.00000, 3.50000, -40.00000, -6.50000, -38.00000, -12.50000, -25.00000, -12.50000, 0.00000, -0.50000, 48.00000, },
+                    
+                }
+                
+            },
+            
+        },
+    }
+
+    
+
     -- apply scale factor
     local s = scale or 1.0
     for bi, body in pairs(physics.data) do

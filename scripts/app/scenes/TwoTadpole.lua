@@ -1,6 +1,7 @@
 local CUR_MODULE = ...
 import("...lib.ChipmunkUtils")
-local scheduler = require("framework.scheduler")
+local fish = import(".fish")
+scheduler = require("framework.scheduler")
 local controller
 local cheackPoint
 local TwoTadpole = class("TwoTadpole")
@@ -21,35 +22,48 @@ function TwoTadpole:init(container , world)
     --container:addChild(self.worldDebug)
 	self.world = world
 	self.container = container
-	local tadpole1 = display.newSprite("#tadpole.png")
-	local tadpole2 = display.newSprite("#tadpole.png")
-	local physicsData = self.physics:get("tadpole")
-	self.body1 = self.world:createCircleBody(0, 8 , 0, 0)
-	self.body2 = self.world:createCircleBody(0, 8 , 0, 0)
-	self.body1:setCollisionType(2)
-	self.body2:setCollisionType(2)
-	self.body1:bind(tadpole1)
-	self.body2:bind(tadpole2)
+	self.fish1 = fish:new()	
+	self.fish2 = fish:new()
+	self.fish1:init(container)
+	self.fish2:init(container)
+	self.body1 = createBody(self.physics:get("fish_head"), world)
+	self.body2 = createBody(self.physics:get("fish_head"), world)
+	self.body1:bind(self.fish1:getBindNode())
+	self.body2:bind(self.fish2:getBindNode())
 	self.cheackPoint = import(".CheackPoint1", CUR_MODULE):new()
 	self.cheackPoint:init(container , world)
-	container:addChild(tadpole1)
-	container:addChild(tadpole2)
-	self:setAngle(self.curAngle)
+	self:setAngle(self.curAngle , 0)
 end
 
---设置角度
-function TwoTadpole:setAngle(angle)
+--设置角度,方向  direction:1顺时针  direction:-1逆时针
+function TwoTadpole:setAngle(angle , direction)
 	self.curAngle = angle
 	self.body1:setPositionX(math.cos(ang2rad(angle))* circle_radius + CENTER_X)
 	self.body1:setPositionY(math.sin(ang2rad(angle)) * circle_radius + CENTER_Y)
 	self.body2:setPositionX(math.cos(ang2rad(angle + 180)) * circle_radius + CENTER_X)
 	self.body2:setPositionY(math.sin(ang2rad(angle + 180)) * circle_radius + CENTER_Y)
+	if direction == 0 then
+		self.body1:setRotation(180)
+		self.body2:setRotation(180)
+	else
+		local d1 = 180 - angle
+		local d2 = 180 - angle
+		if direction == -1 then
+			d2 = d2 - 180
+		else
+			d1 = d1 - 180
+		end
+		self.body1:setRotation(d1)
+		self.body2:setRotation(d2)
+	end
 end
 
 --开始游戏
 function TwoTadpole:start()
 	self.touchHandler = handler(self, self.onLayerTouch)
 	gameLayer:addTouchEventListener(self.touchHandler)
+	self.fish1:start()
+	self.fish2:start()
 	self.world:start()
 	self.cheackPoint:start()
 	self.world:addCollisionScriptListener(handler(self , self.onCollision), 1, 2)
@@ -60,6 +74,8 @@ function TwoTadpole:stop()
 	if not self.touchHandler then
 		gameLayer:removeTouchEventListener(self.touchHandler)
 	end
+	self.fish1.stop()
+	self.fish2.stop()
 	self.cheackPoint:stop()
 	self.world:removeAllCollisionListeners()
 	self.world:stop()
@@ -93,19 +109,21 @@ end
 function TwoTadpole:left()
 	--print("left")
 	self.step = 2
-	self.updateHandler = scheduler.scheduleUpdateGlobal(function ()self:setAngle(self.curAngle + rotate_speed)end)
+	self.updateHandler = scheduler.scheduleUpdateGlobal(function ()self:setAngle(self.curAngle + rotate_speed , -1)end)
 end
 --右触摸
 function TwoTadpole:right()
 	--print("right")
 	self.step = -2
-	self.updateHandler = scheduler.scheduleUpdateGlobal(function ()self:setAngle(self.curAngle - rotate_speed)end)
+	self.updateHandler = scheduler.scheduleUpdateGlobal(function ()self:setAngle(self.curAngle - rotate_speed , 1)end)
 end
 
 --停止旋转
 function TwoTadpole:stopRotate()
 	--print("stop")
 	scheduler.unscheduleGlobal(self.updateHandler)
+	self.body1:setRotation(180)
+	self.body2:setRotation(180)
 end
 
 return TwoTadpole

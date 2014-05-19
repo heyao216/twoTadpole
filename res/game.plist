@@ -4,6 +4,45 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>fish_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{186,217},{25,68}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{25,68}}</string>
+                <key>sourceSize</key>
+                <string>{25,68}</string>
+            </dict>
+            <key>fish_head.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{246,2},{45,80}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{45,80}}</string>
+                <key>sourceSize</key>
+                <string>{45,80}</string>
+            </dict>
+            <key>fish_tail.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{186,116},{99,91}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,6},{99,91}}</string>
+                <key>sourceSize</key>
+                <string>{99,103}</string>
+            </dict>
             <key>grapes.png</key>
             <dict>
                 <key>frame</key>
@@ -43,19 +82,6 @@
                 <key>sourceSize</key>
                 <string>{128,128}</string>
             </dict>
-            <key>tadpole.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{186,116},{16,16}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{16,16}}</string>
-                <key>sourceSize</key>
-                <string>{16,16}</string>
-            </dict>
             <key>watermelon.png</key>
             <dict>
                 <key>frame</key>
@@ -77,9 +103,9 @@
             <key>realTextureFileName</key>
             <string>game.png</string>
             <key>size</key>
-            <string>{256,256}</string>
+            <string>{293,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:183b9936b385b3d9668fde71b63d2676:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:77f827ca49c694c62d3d41df31dddf39:1/1$</string>
             <key>textureFileName</key>
             <string>game.png</string>
         </dict>
