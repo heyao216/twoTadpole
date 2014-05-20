@@ -8,19 +8,17 @@ end
 
 --开始
 function fish:start()
-	self.updateHandler = scheduler.scheduleUpdateGlobal(handler(self, self.onUpdate))
+	self.head:scheduleUpdate(handler(self, self.onUpdate), 0)
 end
 
 --停止
 function fish:stop()
-	if self.updateHandler ~= nil then
-		scheduler.unscheduleGlobal(self.updateHandler)
-	end
+	self.head:unscheduleUpdate()
 end
 
 --逐帧函数
 function fish:onUpdate()
-	print("ok")	
+	--print("ok")	
 end
 
 --获取需绑定的node

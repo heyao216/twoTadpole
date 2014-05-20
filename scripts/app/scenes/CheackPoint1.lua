@@ -26,7 +26,9 @@ end
 
 --重置
 function CheackPoint1:reset()
-	for i = 1 , #self.list do
+	tween.killAll()
+	local l = #self.list
+	for i = l , 1 , -1 do
 		local body = self.list[i]
 		body:getNode():removeFromParentAndCleanup(true)
 		self.world:removeBody(body, true)
@@ -43,13 +45,13 @@ function CheackPoint1:addObject()
 	local body = createBody(physicsData, self.world)
 	body:bind(obj)
 	body:setPosition(math.random(100 , CONFIG_SCREEN_WIDTH  - 100) , CONFIG_SCREEN_HEIGHT)
-	table.insert(self.list, body)
-	--print("list length" , #self.list)
+	table.insert(self.list , body)
 end
 
 --每帧更新
 function CheackPoint1:update()
-	for i = 1 , #self.list do
+	local l = #self.list
+	for i = l , 1 , -1 do
 		local body = self.list[i]
 		if body ~= nil then
 			body:setPositionY(body:getPositionY() - 4)

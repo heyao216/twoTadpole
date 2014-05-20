@@ -1,193 +1,56 @@
-
+Cocos2d: 
 <dict>
 	cocos2d.x.version: 2.2.1
 	cocos2d.x.compiled_with_profiler: false
 	cocos2d.x.compiled_with_gl_state_cache: true
-	gl.vendor: NVIDIA Corporation
-	gl.renderer: GeForce GT 430/PCIe/SSE2
-	gl.version: 4.4.0
+	gl.vendor: Intel Inc.
+	gl.renderer: Intel Iris OpenGL Engine
+	gl.version: 2.1 INTEL-8.24.12
 	gl.max_texture_size: 16384
-	gl.max_texture_units: 192
+	gl.max_texture_units: 16
 	gl.supports_PVRTC: false
 	gl.supports_NPOT: true
 	gl.supports_BGRA8888: false
 	gl.supports_discard_framebuffer: false
 	gl.supports_vertex_array_object: true
 </dict>
-lua_loadChunksFromZIP() - load zip file: D:\QuickWorkSpace\quick-cocos2d-x-2.2.1-rc\lib\framework_precompiled\framework_precompiled.zip
-lua_loadChunksFromZIP() - loaded chunks count: 54
-------------------------------------------------
-LOAD LUA FILE: D:/QuickWorkSpace/twoTadpole/scripts/main.lua
-------------------------------------------------
-[0.0785] [INFO] 
-[0.0790] [INFO] # DEBUG                        = 2
-[0.0792] [INFO] #
-[0.0800] [INFO] # device.platform              = windows
-[0.0804] [INFO] # device.model                 = unknown
-[0.0808] [INFO] # device.language              = cn
-[0.0813] [INFO] # device.writablePath          = D:\QuickWorkSpace\twoTadpole\
-[0.0818] [INFO] # device.cachePath             = D:\QuickWorkSpace\twoTadpole\
-[0.0822] [INFO] # device.directorySeparator    = \
-[0.0827] [INFO] # device.pathSeparator         = ;
-[0.0831] [INFO] #
-[0.0850] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_WIDTH
-[0.0854] [INFO] # CONFIG_SCREEN_WIDTH          = 640.00
-[0.0860] [INFO] # CONFIG_SCREEN_HEIGHT         = 426.67
-[0.0865] [INFO] # display.widthInPixels        = 960.00
-[0.0870] [INFO] # display.heightInPixels       = 640.00
-[0.0877] [INFO] # display.contentScaleFactor   = 1.50
-[0.0891] [INFO] # display.width                = 640.00
-[0.0898] [INFO] # display.height               = 426.67
-[0.0903] [INFO] # display.cx                   = 320.00
-[0.0908] [INFO] # display.cy                   = 213.33
-[0.0913] [INFO] # display.left                 = 0.00
-[0.0918] [INFO] # display.right                = 640.00
-[0.0923] [INFO] # display.top                  = 426.67
-[0.0928] [INFO] # display.bottom               = 0.00
-[0.0932] [INFO] # display.c_left               = -320.00
-[0.0939] [INFO] # display.c_right              = 320.00
-[0.0944] [INFO] # display.c_top                = 213.33
-[0.0949] [INFO] # display.c_bottom             = -213.33
-[0.0953] [INFO] #
-[0.1990] [INFO] Scene "GameScene:onEnter()"
-[2.0633] collision
-[2.0639] collision
-[2.0646] collision
-[2.0651] collision
-[7.8818] collision
-[7.8826] collision
-[7.8831] collision
-[7.8838] collision
-[9.1652] collision
-[9.1657] collision
-[9.1674] collision
-[9.1679] collision
-[9.9680] collision
-[9.9686] collision
-[9.9692] collision
-[9.9697] collision
-[9.9704] collision
-[9.9708] collision
-[9.9712] collision
-[9.9717] collision
-[10.2013] [INFO] LUA VM MEMORY USED: 1260.07 KB
-[15.5201] collision
-[15.5207] collision
-[15.5211] collision
-[15.5221] collision
-[15.5230] collision
-[15.5234] collision
-[15.5239] collision
-[15.5244] collision
-[20.0232] collision
-[20.0240] collision
-[20.0252] collision
-[20.0266] collision
-[20.2065] [INFO] LUA VM MEMORY USED: 1272.40 KB
-[21.2901] collision
-[21.2911] collision
-[21.2917] collision
-[21.2922] collision
-[26.9111] collision
-[26.9117] collision
-[26.9122] collision
-[26.9126] collision
-[29.0117] collision
-[29.0130] collision
-[29.0136] collision
-[29.0141] collision
-[30.1786] collision
-[30.1791] collision
-[30.1797] collision
-[30.1818] collision
-[30.2128] [INFO] LUA VM MEMORY USED: 1284.44 KB
-[32.3130] collision
-[32.3139] collision
-[32.3144] collision
-[32.3151] collision
-[34.2464] collision
-[34.2472] collision
-[34.2479] collision
-[34.2484] collision
-[39.9485] collision
-[39.9493] collision
-[39.9500] collision
-[39.9505] collision
-[40.2152] [INFO] LUA VM MEMORY USED: 1289.84 KB
-[42.2821] collision
-[42.2828] collision
-[42.2835] collision
-[42.2841] collision
-[43.7659] collision
-[43.7667] collision
-[43.7674] collision
-[43.7679] collision
-[45.0826] collision
-[45.0834] collision
-[45.0841] collision
-[45.0847] collision
-[47.1161] collision
-[47.1166] collision
-[47.1173] collision
-[47.1177] collision
-[47.8829] collision
-[47.8834] collision
-[47.8839] collision
-[47.8844] collision
-[49.2499] collision
-[49.2507] collision
-[49.2512] collision
-[49.2519] collision
-[50.2170] [INFO] LUA VM MEMORY USED: 1319.32 KB
-[51.8181] collision
-[51.8186] collision
-[51.8192] collision
-[51.8198] collision
-[54.4049] collision
-[54.4056] collision
-[54.4062] collision
-[54.4087] collision
-[58.0389] collision
-[58.0396] collision
-[58.0403] collision
-[58.0411] collision
-[60.2237] [INFO] LUA VM MEMORY USED: 1326.07 KB
-[60.8903] collision
-[60.8909] collision
-[60.8915] collision
-[60.8921] collision
-[65.2098] collision
-[65.2103] collision
-[65.2109] collision
-[65.2113] collision
-[68.1280] collision
-[68.1285] collision
-[68.1290] collision
-[68.1295] collision
-[70.2286] [INFO] LUA VM MEMORY USED: 1333.41 KB
-[74.0128] collision
-[74.0136] collision
-[74.0143] collision
-[74.0150] collision
-[74.7628] collision
-[74.7636] collision
-[74.7642] collision
-[74.7649] collision
-[77.7304] collision
-[77.7311] collision
-[77.7318] collision
-[77.7326] collision
-[80.2305] [INFO] LUA VM MEMORY USED: 1338.17 KB
-[80.8472] collision
-[80.8477] collision
-[80.8482] collision
-[80.8494] collision
-[82.3059] [INFO] Scene "GameScene:onExit()"
-[82.3067] [INFO] ----------------------------------------
-[82.3077] [INFO] LUA VM MEMORY USED: 1339.90 KB
-cocos2d: "cc_fps_images" rc=4 id=2 256 x 32 @ 16 bpp => 16 KB
-cocos2d: "D:\QuickWorkSpace\twoTadpole\res/commonBg.jpg" rc=2 id=3 640 x 960 @ 32 bpp => 2400 KB
-cocos2d: "D:\QuickWorkSpace\twoTadpole\res/game.png" rc=9 id=4 256 x 256 @ 32 bpp => 256 KB
-cocos2d: CCTextureCache dumpDebugInfo: 3 textures, for 2672 KB (2.61 MB)
-[82.3137] [INFO] ----------------------------------------
-CCPhysicsWorld::~CCPhysicsWorld(void)
+Cocos2d: lua_loadChunksFromZIP() - load zip file: /Users/heyao/Desktop/WorkSpace/quick-cocos2d-x-2.2.1-rc/lib/framework_precompiled/framework_precompiled.zip
+Cocos2d: lua_loadChunksFromZIP() - loaded chunks count: 54
+Cocos2d: ------------------------------------------------
+Cocos2d: LOAD LUA FILE: /Users/heyao/Desktop/WorkSpace/git/twoTadpole/scripts/main.lua
+Cocos2d: ------------------------------------------------
+Cocos2d: [0.0127] [INFO] 
+Cocos2d: [0.0127] [INFO] # DEBUG                        = 2
+Cocos2d: [0.0128] [INFO] #
+Cocos2d: [0.0128] [INFO] # device.platform              = mac
+Cocos2d: [0.0129] [INFO] # device.model                 = unknown
+Cocos2d: [0.0129] [INFO] # device.language              = cn
+Cocos2d: [0.0129] [INFO] # device.writablePath          = /Users/heyao/Desktop/WorkSpace/git/twoTadpole/
+Cocos2d: [0.0130] [INFO] # device.cachePath             = /Users/heyao/Desktop/WorkSpace/git/twoTadpole/
+Cocos2d: [0.0130] [INFO] # device.directorySeparator    = /
+Cocos2d: [0.0130] [INFO] # device.pathSeparator         = :
+Cocos2d: [0.0130] [INFO] #
+Cocos2d: [0.0146] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_WIDTH
+Cocos2d: [0.0146] [INFO] # CONFIG_SCREEN_WIDTH          = 640.00
+Cocos2d: [0.0146] [INFO] # CONFIG_SCREEN_HEIGHT         = 960.00
+Cocos2d: [0.0146] [INFO] # display.widthInPixels        = 640.00
+Cocos2d: [0.0147] [INFO] # display.heightInPixels       = 960.00
+Cocos2d: [0.0147] [INFO] # display.contentScaleFactor   = 1.00
+Cocos2d: [0.0147] [INFO] # display.width                = 640.00
+Cocos2d: [0.0147] [INFO] # display.height               = 960.00
+Cocos2d: [0.0147] [INFO] # display.cx                   = 320.00
+Cocos2d: [0.0147] [INFO] # display.cy                   = 480.00
+Cocos2d: [0.0147] [INFO] # display.left                 = 0.00
+Cocos2d: [0.0147] [INFO] # display.right                = 640.00
+Cocos2d: [0.0147] [INFO] # display.top                  = 960.00
+Cocos2d: [0.0147] [INFO] # display.bottom               = 0.00
+Cocos2d: [0.0147] [INFO] # display.c_left               = -320.00
+Cocos2d: [0.0147] [INFO] # display.c_right              = 320.00
+Cocos2d: [0.0147] [INFO] # display.c_top                = 480.00
+Cocos2d: [0.0148] [INFO] # display.c_bottom             = -480.00
+Cocos2d: [0.0148] [INFO] #
+Initializing cpSpace - Chipmunk v6.1.4 (Debug Enabled)
+Compile with -DNDEBUG defined to disable debug mode and runtime assertion checks
+Cocos2d: [0.2165] [INFO] Scene "GameScene:onEnter()"
+Cocos2d: [10.7622] [INFO] LUA VM MEMORY USED: 1340.60 KB
+Cocos2d: [20.7786] [INFO] LUA VM MEMORY USED: 1354.90 KB

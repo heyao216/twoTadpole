@@ -1,7 +1,8 @@
 local CUR_MODULE = ...
-import("...lib.ChipmunkUtils")
-local fish = import(".fish")
 scheduler = require("framework.scheduler")
+import("...lib.ChipmunkUtils")
+import("...lib.tween")
+local fish = import(".fish")
 local controller
 local cheackPoint
 local TwoTadpole = class("TwoTadpole")
@@ -37,7 +38,8 @@ end
 
 --设置角度,方向  direction:1顺时针  direction:-1逆时针
 function TwoTadpole:setAngle(angle , direction)
-	self.curAngle = angle
+	self.curAngle = angle % 360
+	--print("angle"..angle.." curAngle"..self.curAngle)
 	self.body1:setPositionX(math.cos(ang2rad(angle))* circle_radius + CENTER_X)
 	self.body1:setPositionY(math.sin(ang2rad(angle)) * circle_radius + CENTER_Y)
 	self.body2:setPositionX(math.cos(ang2rad(angle + 180)) * circle_radius + CENTER_X)
@@ -83,7 +85,7 @@ end
 
 --碰撞处理
 function TwoTadpole:onCollision(phase , event)
-	print("collision")
+	--print("collision")
 	if phase == "begin" then
 		self.cheackPoint:reset()
 	end
@@ -111,6 +113,7 @@ function TwoTadpole:left()
 	self.step = 2
 	self.updateHandler = scheduler.scheduleUpdateGlobal(function ()self:setAngle(self.curAngle + rotate_speed , -1)end)
 end
+
 --右触摸
 function TwoTadpole:right()
 	--print("right")
@@ -118,12 +121,24 @@ function TwoTadpole:right()
 	self.updateHandler = scheduler.scheduleUpdateGlobal(function ()self:setAngle(self.curAngle - rotate_speed , 1)end)
 end
 
+--鱼转身
+function TwoTadpole:rotateBody()
+	-- body
+end
+
 --停止旋转
 function TwoTadpole:stopRotate()
 	--print("stop")
 	scheduler.unscheduleGlobal(self.updateHandler)
-	self.body1:setRotation(180)
-	self.body2:setRotation(180)
+	local angle1 , angle2 = 180 , 180
+	if self.body1:getRotation() < 0 then
+		angle1 = -180
+	end
+	if self.body2:getRotation() < 0 then
+		angle2 = -180
+	end
+	tween.rotateTo(self.body1 , angle1 , 6)
+	tween.rotateTo(self.body2 , angle2 , 6)
 end
 
 return TwoTadpole
