@@ -1,3 +1,4 @@
+--支持对非Node对象做动画,只要有相关方法如：getPosition,setPosition,getRotation,setRotation等
 tween = {}
 tween.tweenList = {}
 
@@ -19,9 +20,10 @@ end
 
 --用指定帧数完成一个旋转动画
 function tween.rotateTo(target , angle , frames)
+	--print("angle:"..angle , "frames:"..frames)
 	local t = {}
-	t.step = (angle - target:getRotation()) / frames
 	t.target = target
+	t.step = (angle - t.target:getRotation()) / frames
 	t.restFrames = frames
 	t.isComplete = false
 	t.advance = function () rotateAdvance(t) end

@@ -1,6 +1,6 @@
 local CUR_MODULE = ...
 local CheackPoint1 = class("CheackPoint1")
-local NAMES = {"pineapple" , "strawberry" , "watermelon" , "grapes"}
+local NAMES = {"starFish" , "goldFish" , "turtle" , "yellowFish" , "octopus"}
 function CheackPoint1:ctor()
 	self.list = {}
 	self.physics = require("scripts/app/pedatas/fruits").physicsData(1)
@@ -36,6 +36,19 @@ function CheackPoint1:reset()
 	self.list = {}
 end
 
+--移除一个障碍物
+function CheackPoint1:removeBody(body)
+	local l = #self.list
+	for i = l , 1 , -1 do
+		if body == self.list[i] then
+			table.remove(self.list , i)
+			--body:setScale(1.5)
+			body:getNode():removeFromParentAndCleanup(true)
+			self.world:removeBody(body)
+		end
+	end
+end
+
 --添加一个障碍物
 function CheackPoint1:addObject()
 	local name = NAMES[math.random(1 , #NAMES)]
@@ -44,7 +57,7 @@ function CheackPoint1:addObject()
 	local physicsData = self.physics:get(name)
 	local body = createBody(physicsData, self.world)
 	body:bind(obj)
-	body:setPosition(math.random(100 , CONFIG_SCREEN_WIDTH  - 100) , CONFIG_SCREEN_HEIGHT)
+	body:setPosition(math.random(150 , CONFIG_SCREEN_WIDTH  - 150) , CONFIG_SCREEN_HEIGHT)
 	table.insert(self.list , body)
 end
 

@@ -7,11 +7,11 @@
             <key>fish_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{186,217},{25,68}}</string>
+                <string>{{94,260},{25,68}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{25,68}}</string>
                 <key>sourceSize</key>
@@ -20,7 +20,7 @@
             <key>fish_head.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{246,2},{45,80}}</string>
+                <string>{{2,410},{45,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,67 +33,80 @@
             <key>fish_tail.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{186,116},{99,91}}</string>
+                <string>{{2,167},{99,91}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,6},{99,91}}</string>
                 <key>sourceSize</key>
                 <string>{99,103}</string>
             </dict>
-            <key>grapes.png</key>
+            <key>goldFish.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,132},{84,122}}</string>
+                <string>{{2,260},{90,68}}</string>
                 <key>offset</key>
-                <string>{3,-1}</string>
+                <string>{5,1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{25,4},{84,122}}</string>
+                <string>{{12,2},{90,68}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{104,74}</string>
             </dict>
-            <key>pineapple.png</key>
+            <key>octopus.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{128,128}}</string>
+                <string>{{2,330},{84,78}}</string>
+                <key>offset</key>
+                <string>{0,1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,2},{84,78}}</string>
+                <key>sourceSize</key>
+                <string>{84,84}</string>
+            </dict>
+            <key>starFish.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{49,410},{72,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{1,0},{72,74}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{74,74}</string>
             </dict>
-            <key>strawberry.png</key>
+            <key>turtle.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{88,132},{96,114}}</string>
+                <string>{{2,69},{96,103}}</string>
                 <key>offset</key>
-                <string>{0,-1}</string>
+                <string>{-2,-3}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,6},{96,103}}</string>
+                <key>sourceSize</key>
+                <string>{100,109}</string>
+            </dict>
+            <key>yellowFish.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{105,65}}</string>
+                <key>offset</key>
+                <string>{-2,-3}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{16,8},{96,114}}</string>
+                <string>{{1,6},{105,65}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
-            </dict>
-            <key>watermelon.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{132,2},{112,112}}</string>
-                <key>offset</key>
-                <string>{1,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{9,8},{112,112}}</string>
-                <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{111,71}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -103,9 +116,9 @@
             <key>realTextureFileName</key>
             <string>game.png</string>
             <key>size</key>
-            <string>{293,256}</string>
+            <string>{123,492}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:77f827ca49c694c62d3d41df31dddf39:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:d0aa1e4fabe62056bbfaba070d5b9a8b:1/1$</string>
             <key>textureFileName</key>
             <string>game.png</string>
         </dict>
