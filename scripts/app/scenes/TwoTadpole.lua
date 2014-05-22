@@ -11,6 +11,8 @@ local CENTER_Y = 150
 function TwoTadpole:ctor()
 	self.curAngle = 0
 	self.physics = import("..pedatas.fruits" , CUR_MODULE).physicsData(1)
+	self.score = ui.newTTFLabel({text = "得分:0" , size = 30 , color = ccc3(255, 255, 255) , align = ui.TEXT_ALIGN_LEFT , valign = ui.TEXT_VALIGN_TOP})
+	self.score:setAnchorPoint(ccp(0, 1))
 	display.addSpriteFramesWithFile(GAME_DATA , GAME_IMG)
 end
 
@@ -19,6 +21,8 @@ function TwoTadpole:init(layer , world)
 	self.world = world
 	self.layer = layer
 	self.container = display.newBatchNode(GAME_IMG)
+	self.score:setPosition(ccp(0, CONFIG_SCREEN_HEIGHT))
+	self.layer:addChild(self.score)
 	--调试
 	--self.worldDebug = world:createDebugNode()
     --self.layer:addChild(self.worldDebug)
@@ -61,6 +65,7 @@ end
 
 --开始游戏
 function TwoTadpole:start()
+	self:updateScores(0)
 	self.touches = 0
 	self.touchHandler = handler(self, self.onLayerTouch)
 	gameLayer:addTouchEventListener(self.touchHandler)
@@ -90,6 +95,7 @@ function TwoTadpole:onCollision(phase , event)
 	--print("collision")
 	if phase == "begin" then
 		self.cheackPoint:reset()
+		self:updateScores(0)
 	end
 	return true
 end
@@ -99,6 +105,7 @@ function TwoTadpole:onEateStarFish(phase , event)
 	--print("吃掉")
 	if phase == "begin" then
 		self.cheackPoint:removeBody(event:getBody2())
+		self:updateScores(self.currentScores + 1)
 	end
 	return true
 end
@@ -162,6 +169,12 @@ function TwoTadpole:stopRotate()
 	if frames2 ~= 0 then
 		tween.rotateTo(self.body2 , angle2 , frames2)
 	end
+end
+
+--更新分数
+function TwoTadpole:updateScores(scores)
+	self.currentScores = scores
+	self.score:setString("得分:"..self.currentScores)
 end
 
 return TwoTadpole
